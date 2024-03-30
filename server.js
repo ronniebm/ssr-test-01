@@ -73,7 +73,7 @@ const ssrManifest = isProduction
 // Create http server
 const app = express()
 
-// Add Vite or respective production middlewares
+// Add Vite or respective production middlewares.
 let vite
 if (!isProduction) {
   const { createServer } = await import('vite')
