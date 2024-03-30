@@ -4,7 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "node server",
+    "start": "HTTPS=true SSL_CRT_FILE='./localhost.pem' SSL_KEY_FILE='./localhost-key.pem'",
+    "dev": "npm start && node server",
     "build": "npm run build:client && npm run build:server",
     "build:client": "vite build --ssrManifest --outDir dist/client",
     "build:server": "vite build --ssr src/entry-server.jsx --outDir dist/server",
